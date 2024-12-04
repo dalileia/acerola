@@ -1,0 +1,15 @@
+
+-lib util-kit
+-lib hxjava
+-lib anonstruct
+-lib datetime
+-lib apirock
+
+-cp src-lib
+-cp src-test
+
+-D debug
+
+-main acerola.test.api.AcerolaApiTest
+
+-java ./build/acerola/test/api/

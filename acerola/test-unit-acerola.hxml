@@ -1,0 +1,14 @@
+
+-lib util-kit
+-lib anonstruct
+-lib utest
+-lib datetime
+-lib hxnodejs
+
+-cp src-test
+-cp src-lib
+-cp src-example
+
+-main acerola.test.unit.AcerolaUnitTest
+
+-js ./build/acerola/test/unit.js

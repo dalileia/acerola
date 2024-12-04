@@ -1,0 +1,13 @@
+
+-lib util-kit
+-lib hxnodejs
+-lib anonstruct
+-lib datetime
+-lib hxnodejs
+
+-cp src-lib
+-cp src-example
+
+-main project.api.ProjectApi
+
+-js ./build/acerola/api/api.js

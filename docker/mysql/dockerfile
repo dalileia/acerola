@@ -1,0 +1,8 @@
+FROM --platform=linux/amd64 mysql:5.7
+
+COPY ./config/mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
+
+# TODOS ARQUIVOS SH OU SQL SERAO EXECUTADOS EM ORDEM 
+# ALFABETICAS QUANDO COLOCADO NA PASTA docker-entrypoint-initdb.d
+
+COPY ./database/00.sql /docker-entrypoint-initdb.d/00.sql

@@ -1,0 +1,24 @@
+version: '3'
+services:
+
+    haxe:
+        restart: always
+        build:
+            context: ./docker/haxe/
+            dockerfile: dockerfile
+        environment: 
+            KEEP_CONTAINER_ALIVE: "yes"
+        volumes:
+            - ./docker/shared:/docker-shared
+            - ./acerola:/acerola
+    
+    mysql:
+        restart: always
+        build:
+            context: ./docker/mysql/
+            dockerfile: dockerfile
+        environment:
+            MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+            MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+        ports:
+            - "${MYSQL_PORT}:3306"
